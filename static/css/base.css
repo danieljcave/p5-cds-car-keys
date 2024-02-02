@@ -5,6 +5,7 @@ body{
     background-color: #EAEAEA;
     font-family: 'Montserrat', sans-serif;
     color: #000;
+    height: calc(100vh - 100px);
 }
 
 .cds-nav-logo{
@@ -16,4 +17,12 @@ body{
 
 .nav-link{
     color: #000;
+}
+
+.home-font{
+    text-transform: uppercase;
+}
+
+.header-container{
+    padding-top: 250px;
 }
