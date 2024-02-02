@@ -6,3 +6,10 @@ body{
     font-family: 'Montserrat', sans-serif;
     color: #000;
 }
+
+.cds-nav-logo{
+    height: 30px;
+    width: 32px;
+    align-items: center;
+    margin-right: .5rem;
+}
