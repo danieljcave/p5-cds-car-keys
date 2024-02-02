@@ -3,24 +3,39 @@
 
 {% block page_header %}
 <div class="container header-container">
-   <div class="row">
-       <div class="col"></div>
-   </div>
+    <div class="row">
+        <div class="col"></div>
+    </div>
 </div>
 {% endblock %}
 
 {% block content %}
 <div class="container">
-   <div class="row">
-       <div class="col-12 col-sm-6 my-auto text-center">
-           <h2 class="display-4 home-font text-black">For all your</h2>
-           <h2 class="display-4 home-font text-black">Vehicle Needs</h2>
-           <a class="btn btn-outline-secondary mb-2" href="#" role="button">Shop Now</a>
-           <a class="btn btn-outline-secondary mb-2" href="#" role="button">Learn More</a>
-       </div>
-       <div class="col-12 col-sm-6 my-auto d-none d-sm-block">
-           <img src="{% static 'media/cds-logo.png' %}" class="img-fluid" alt="CDS Car Keys Logo">
-       </div>
-   </div>
+    <div class="row">
+        <div class="col-12 col-sm-6 my-auto text-center">
+            <h2 class="display-4 home-font text-black home-header">For all your</h2>
+            <h2 class="display-4 home-font text-black home-header">Vehicle Needs</h2>
+            <a class="btn btn-outline-secondary mb-2" href="#" role="button">Shop Now</a>
+            <a class="btn btn-outline-secondary mb-2" href="#" role="button">Learn More</a>
+        </div>
+        <div class="col-12 col-sm-6 my-auto d-none d-sm-block">
+            <img src="{% static 'media/cds-logo.png' %}" class="img-fluid" alt="CDS Car Keys Logo">
+        </div>
+    </div>
+</div>
+<div class="container-fluid about-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 my-auto text-center mt-2">
+                <h2 class="display-6 feature-header text-uppercase section-header">About Us</h2>
+                <p class="about-text pt-2">We are a Birmingham based business offering a fully mobile service around 
+                    the West Midlands. We provide spare car & van keys for most vehicles, along with attending times 
+                    where all keys have been lost for a car/van or keys have been locked in a car/van.</p>
+                <p class="about-text pt-2">We also fit Ghost II Immobilisers and trackers fully mobile around the West 
+                    Midlands in areas such as Acocks Green, Hall Green, Solihull, Sheldon Sparkbrook, Sparkhill, Dudley, 
+                    Wolverhampton, Coventry, Aston, Alum Rock, Small Heath and more!</p>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}

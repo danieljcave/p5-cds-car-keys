@@ -23,8 +23,26 @@ body{
     text-transform: uppercase;
 }
 
+.home-header{
+    font-weight: 600;
+}
+
 .header-container{
     padding-top: 250px;
+}
+
+.about-section{
+    margin-top: 250px;
+    background-color: #404040;
+}
+
+.section-header{
+    color: #EAEAEA;
+    font-weight: 500;
+}
+
+.about-text{
+    color: #EAEAEA;
 }
 
 @media (max-width: 768px) {
