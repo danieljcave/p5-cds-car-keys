@@ -13,3 +13,7 @@ body{
     align-items: center;
     margin-right: .5rem;
 }
+
+.nav-link{
+    color: #000;
+}
