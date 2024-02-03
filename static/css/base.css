@@ -68,6 +68,10 @@ body{
     border-top: none;
 }
 
+.need-us-section{
+    background-color: #404040;
+}
+
 @media (max-width: 1399px){
     .card{
         height: 340px;
