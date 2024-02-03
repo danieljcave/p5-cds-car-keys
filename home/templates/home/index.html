@@ -26,17 +26,20 @@
 <div class="container-fluid about-section">
     <div class="container">
         <div class="row">
-            <div class="my-auto text-center mt-3">
-                <h2 class="display-6 feature-header text-uppercase section-header">About Us</h2>
+            <div class="my-auto text-center">
+                <h2 class="display-6 feature-header text-uppercase section-header m-3">About Us</h2>
                 <div class="row">
-                    <div class="col-12 col-md-6 p-4">
-                        <p class="about-text">We are a Birmingham based business offering a fully mobile service around 
-                            the West Midlands. We provide spare car & van keys for most vehicles, along with attending times 
+                    <div class="col-12 col-md-6 p-3">
+                        <p class="about-text">We are a Birmingham based business offering a fully mobile service around
+                            the West Midlands. We provide spare car & van keys for most vehicles, along with attending
+                            times
                             where all keys have been lost for a car/van or keys have been locked in a car/van.</p>
                     </div>
-                    <div class="col-12 col-md-6 p-4">
-                        <p class="about-text">We also fit Ghost II Immobilisers and trackers fully mobile around the West 
-                            Midlands in areas such as Acocks Green, Hall Green, Solihull, Sheldon Sparkbrook, Sparkhill, Dudley, 
+                    <div class="col-12 col-md-6 p-3">
+                        <p class="about-text">We also fit Ghost II Immobilisers and trackers fully mobile around the
+                            West
+                            Midlands in areas such as Acocks Green, Hall Green, Solihull, Sheldon Sparkbrook, Sparkhill,
+                            Dudley,
                             Wolverhampton, Coventry, Aston, Alum Rock, Small Heath and more!</p>
                     </div>
                 </div>
@@ -44,5 +47,75 @@
         </div>
     </div>
 </div>
-
+<div class="container-fluid services-section">
+    <div class="container">
+        <div class="row">
+            <div class="my-auto text-center">
+                <h2 class="display-6 services-header text-uppercase m-3">Services</h2>
+                <div class="row row-cols-1 row-cols-md-2 g-4">
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="{% static 'media/lost-key.jpeg' %}" class="img-fluid services-img"
+                                    alt="Lost all Car/Van Keys Image">
+                                <h5 class="card-title">Lost all Car/Van Keys</h5>
+                                <p class="card-text">Have you lost all the keys to your vehicle? Contact us now for a
+                                    price on entering your vehicle without any damage and making a new key!</p>
+                            </div>
+                            <div class="card-footer text-center">
+                                <a class="btn btn-outline-secondary" href="#" role="button">Read More!</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="{% static 'media/spare-key.jpeg' %}" class="img-fluid services-img"
+                                    alt="Spare Car/Van Keys Image">
+                                <h5 class="card-title">Spare Car/Van Keys</h5>
+                                <p class="card-text">Did you purchase your vehicle with only one key? Have you lost your
+                                    primary key and now using a spare? Spare keys can be a life saver in the event you
+                                    do lose your keys! At CDS Auto Services we can offer affordable spare keys for your
+                                    car or van at competitive prices</p>
+                            </div>
+                            <div class="card-footer text-center">
+                                <a class="btn btn-outline-secondary" href="#" role="button">Read More!</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="{% static 'media/autowatch-ghost.png' %}" class="img-fluid services-img"
+                                    alt="Autowatch Ghost II">
+                                <h5 class="card-title">Autowatch Ghost II</h5>
+                                <p class="card-text">Vehicle theft is a major problem in the UK, The ghost system works
+                                    by requiring a code to be entered via factory buttons before the engine will start!
+                                    Supplied and fitted for only £499!</p>
+                            </div>
+                            <div class="card-footer text-center">
+                                <a class="btn btn-outline-secondary" href="#" role="button">Read More!</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="{% static 'media/cds-logo.png' %}" class="img-fluid services-img"
+                                    alt="CDS Car Keys Logo">
+                                <h5 class="card-title">Locked out of your vehicle?</h5>
+                                <p class="card-text">Have you locked your keys in your car or van? We can enter your
+                                    vehicle without causing any damage! Contact us now - our average response time is
+                                    under an hour!</p>
+                            </div>
+                            <div class="card-footer text-center">
+                                <a class="btn btn-outline-secondary" href="#" role="button">Read More!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
