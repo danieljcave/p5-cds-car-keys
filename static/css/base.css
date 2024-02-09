@@ -72,6 +72,34 @@ body{
     background-color: #404040;
 }
 
+.services-heading{
+    font-size: 28px;
+}
+
+.services-break{
+    width: 33%;
+    border: 1px solid #EAEAEA;
+}
+
+.services-break-heading{
+    width: 75%;
+    border: 1px solid #EAEAEA;
+}
+
+.services-icons{
+    font-size: 28px;
+    padding-bottom: .5rem;
+}
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 1399px){
     .card{
         height: 340px;
