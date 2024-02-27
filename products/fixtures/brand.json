@@ -1,0 +1,58 @@
+[
+    {
+        "pk": 1,
+        "model": "products.brand",
+        "fields": {
+          "name": "audi",
+          "friendly_name": "Audi"
+        }
+      },
+      {
+        "pk": 2,
+        "model": "products.brand",
+        "fields": {
+          "name": "ford",
+          "friendly_name": "Ford"
+        }
+      },
+      {
+        "pk": 3,
+        "model": "products.brand",
+        "fields": {
+          "name": "volkswagen",
+          "friendly_name": "Volkswagen"
+        }
+      },
+      {
+        "pk": 4,
+        "model": "products.brand",
+        "fields": {
+          "name": "bmw",
+          "friendly_name": "BMW"
+        }
+      },
+      {
+        "pk": 5,
+        "model": "products.brand",
+        "fields": {
+          "name": "porche",
+          "friendly_name": "Porche"
+        }
+      },
+      {
+        "pk": 6,
+        "model": "products.brand",
+        "fields": {
+          "name": "nissan",
+          "friendly_name": "Nissan"
+        }
+      },
+      {
+        "pk": 7,
+        "model": "products.brand",
+        "fields": {
+          "name": "land_rover",
+          "friendly_name": "Land Rover"
+        }
+      }
+]
