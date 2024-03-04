@@ -20,7 +20,7 @@
         "model": "products.brand",
         "fields": {
           "name": "volkswagen",
-          "friendly_name": "Volkswagen"
+          "friendly_name": "VW"
         }
       },
       {
@@ -53,6 +53,158 @@
         "fields": {
           "name": "land_rover",
           "friendly_name": "Land Rover"
+        }
+      },
+      {
+        "pk": 8,
+        "model": "products.brand",
+        "fields": {
+          "name": "toyota",
+          "friendly_name": "Toyota"
+        }
+      },
+      {
+        "pk": 9,
+        "model": "products.brand",
+        "fields": {
+          "name": "bugatti",
+          "friendly_name": "Bugatti"
+        }
+      },
+      {
+        "pk": 10,
+        "model": "products.brand",
+        "fields": {
+          "name": "lamborghini",
+          "friendly_name": "Lamborghini"
+        }
+      },
+      {
+        "pk": 11,
+        "model": "products.brand",
+        "fields": {
+          "name": "maserati",
+          "friendly_name": "Maserati"
+        }
+      },
+      {
+        "pk": 12,
+        "model": "products.brand",
+        "fields": {
+          "name": "jaguar",
+          "friendly_name": "Jaguar"
+        }
+      },
+      {
+        "pk": 13,
+        "model": "products.brand",
+        "fields": {
+          "name": "Volvo",
+          "friendly_name": "volvo"
+        }
+      },
+      {
+        "pk": 14,
+        "model": "products.brand",
+        "fields": {
+          "name": "mercedes_benz",
+          "friendly_name": "Mercedes-Benz"
+        }
+      },
+      {
+        "pk": 15,
+        "model": "products.brand",
+        "fields": {
+          "name": "hyundai",
+          "friendly_name": "Hyundai"
+        }
+      },
+      {
+        "pk": 15,
+        "model": "products.brand",
+        "fields": {
+          "name": "renault",
+          "friendly_name": "Renault"
+        }
+      },
+      {
+        "pk": 16,
+        "model": "products.brand",
+        "fields": {
+          "name": "kia",
+          "friendly_name": "Kia"
+        }
+      },
+      {
+        "pk": 17,
+        "model": "products.brand",
+        "fields": {
+          "name": "peugeot",
+          "friendly_name": "Peugeot"
+        }
+      },
+      {
+        "pk": 18,
+        "model": "products.brand",
+        "fields": {
+          "name": "citroën",
+          "friendly_name": "Citroën"
+        }
+      },
+      {
+        "pk": 19,
+        "model": "products.brand",
+        "fields": {
+          "name": "seat",
+          "friendly_name": "Seat"
+        }
+      },
+      {
+        "pk": 20,
+        "model": "products.brand",
+        "fields": {
+          "name": "fiat",
+          "friendly_name": "Fiat"
+        }
+      },
+      {
+        "pk": 21,
+        "model": "products.brand",
+        "fields": {
+          "name": "mini",
+          "friendly_name": "Mini"
+        }
+      },
+      {
+        "pk": 22,
+        "model": "products.brand",
+        "fields": {
+          "name": "lexus",
+          "friendly_name": "Lexus"
+        }
+      },
+      {
+        "pk": 23,
+        "model": "products.brand",
+        "fields": {
+          "name": "ferrari",
+          "friendly_name": "Ferrari"
+        }
+      },
+      {
+        "pk": 24,
+        "model": "products.brand",
+        "fields": {
+          "name": "vauxhall",
+          "friendly_name": "Vauxhall"
+        }
+      },
+      {
+        "pk": 25,
+        "model": "products.brand",
+        "fields": {
+          "name": "infiniti",
+          "friendly_name": "Infiniti"
         }
       }
 ]
