@@ -3,7 +3,7 @@ from django.db import models
 
 class Brand(models.Model):
     class Meta:
-        verbose_name_plural = 'Brand'
+        verbose_name_plural = 'Brands'
 
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
