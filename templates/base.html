@@ -12,7 +12,7 @@
   {% endblock %}
 
   <!-- CDS Favicon -->
-  <link rel="icon" type="image/x-icon" href="{% static 'media/cds-logo-favicon.png' %}">
+  <link rel="icon" type="image/x-icon" href="/media/cds-logo-favicon.png">
 
   {% block corecss %}
   <!-- Bootstrap CSS -->
@@ -53,7 +53,7 @@
   <header class="container fixed-top">
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="{% url 'home' %}">
           <img src="/media/cds-logo.png" alt="Logo" class="img-fluid cds-nav-logo"><strong>CDS</strong>
           Car Keys</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -63,10 +63,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Home</a>
+              <a class="nav-link" aria-current="page" href="{% url 'home' %}">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Shop</a>
+              <a class="nav-link" href="{% url 'products' %}">Shop</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Contact Us</a>
@@ -124,7 +124,7 @@
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-4">
       <p class="col-md-4 mb-0 text-body-secondary">&copy; 2024 CDS Car Keys</p>
 
-      <a href="#"
+      <a href="{% url 'home' %}"
         class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
         <img class="" width="40" height="38" src="/media/cds-logo.png" alt="CDS Footer Logo"></img>
       </a>
