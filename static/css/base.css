@@ -153,6 +153,21 @@ body{
     color: white !important;
 }
 
+.table-transparent {
+    --bs-table-bg: transparent;
+}
+
+.btn-black {
+    background: black;
+    color: white;
+}
+
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #222;
+    color: white;
+}
 
 
 
