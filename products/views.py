@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
-from .models import Product
+from .models import Product, Brand
 from django.db.models import Q
 
 
@@ -9,8 +9,14 @@ def all_products(request):
 
     products = Product.objects.all()
     query = None
+    brands = None
 
     if request.GET:
+        if 'brand' in request.GET:
+            brands = request.GET['brand'].split(',')
+            products = products.filter(brand__name__in=brands)
+            brands = Brand.objects.filter(name__in=brands)
+
         if 'q' in request.GET:
             query = request.GET.get('q')
             if not query:
@@ -24,6 +30,7 @@ def all_products(request):
     context = {
         'products': products,
         'search_term': query,
+        'current_brands': brands,
     }
 
     return render(request, 'products/products.html', context)

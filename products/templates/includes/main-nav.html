@@ -7,26 +7,52 @@
         <li><a class="dropdown-item" href="#">By Price</a></li>
         <li><a class="dropdown-item" href="#">By Rating</a></li>
         <li><a class="dropdown-item" href="#">By Manufacturer</a></li>
-        <li><a class="dropdown-item" href="#">All Products</a></li>
+        <li><a class="dropdown-item" href="{% url 'products' %}">All Products</a></li>
       </ul>
     </li>
     <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="by-manufacturer-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        By Manufacturer
-      </a>
-      <ul class="dropdown-menu" aria-labelledby="by-manufacturer-link">
-        <li><a class="dropdown-item" href="#">Audi</a></li>
-        <li><a class="dropdown-item" href="#">BMW</a></li>
-        <li><a class="dropdown-item" href="#">Ford</a></li>
-        <li><a class="dropdown-item" href="#">All Keys</a></li>
-      </ul>
+        <a class="nav-link dropdown-toggle" href="#" id="by-manufacturer-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            By Manufacturer
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="by-manufacturer-link">
+            <div class="row">
+                <li><a class="dropdown-item" href="{% url 'products' %}?brand=audi">Audi</a></li>
+                <li><a class="dropdown-item" href="{% url 'products' %}?brand=bmw">BMW</a></li>
+                <li><a class="dropdown-item" href="{% url 'products' %}?brand=bugatti">Bugatti</a></li>
+                <li><a class="dropdown-item" href="{% url 'products' %}?brand=citroën">Citroën</a></li>
+                <li><a class="dropdown-item" href="{% url 'products' %}?brand=ferrari">Ferrari</a></li>
+                <li><a class="dropdown-item" href="{% url 'products' %}?brand=fiat">Fiat</a></li>
+                <li><a class="dropdown-item" href="{% url 'products' %}?brand=ford">Ford</a></li>
+                <li><a class="dropdown-item" href="{% url 'products' %}?brand=hyundai">Hyundai</a></li>
+                <li><a class="dropdown-item" href="{% url 'products' %}?brand=infiniti">Infiniti</a></li>
+                <li><a class="dropdown-item" href="{% url 'products' %}?brand=jaguar">Jaguar</a></li>
+                <li><a class="dropdown-item" href="{% url 'products' %}?brand=kia">Kia</a></li>
+                <li><a class="dropdown-item" href="{% url 'products' %}?brand=lamborghini">Lamborghini</a></li>
+                <li><a class="dropdown-item" href="{% url 'products' %}?brand=land_rover">Land Rover</a></li>
+                <li><a class="dropdown-item" href="{% url 'products' %}?brand=lexus">Lexus</a></li>
+                <li><a class="dropdown-item" href="{% url 'products' %}?brand=maserati">Maserati</a></li>
+                <li><a class="dropdown-item" href="{% url 'products' %}?brand=mercedes_benz">Mercedes-Benz</a></li>
+                <li><a class="dropdown-item" href="{% url 'products' %}?brand=mini">Mini</a></li>
+                <li><a class="dropdown-item" href="{% url 'products' %}?brand=nissan">Nissan</a></li>
+                <li><a class="dropdown-item" href="{% url 'products' %}?brand=peugeot">Peugeot</a></li>
+                <li><a class="dropdown-item" href="{% url 'products' %}?brand=porche">Porche</a></li>
+                <li><a class="dropdown-item" href="{% url 'products' %}?brand=renault">Renault</a></li>
+                <li><a class="dropdown-item" href="{% url 'products' %}?brand=seat">Seat</a></li>
+                <li><a class="dropdown-item" href="{% url 'products' %}?brand=toyota">Toyota</a></li>
+                <li><a class="dropdown-item" href="{% url 'products' %}?brand=volkswagen">Volkswagen</a></li>
+                <li><a class="dropdown-item" href="{% url 'products' %}?brand=vauxhall">Vauxhall</a></li>
+                <li><a class="dropdown-item" href="{% url 'products' %}?brand=volvo">Volvo</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="{% url 'products' %}">All Keys</a></li>
+            </div>
+        </ul>
     </li>
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="special-offers-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Special Offers
       </a>
       <ul class="dropdown-menu" aria-labelledby="special-offers-link">
-        <li><a class="dropdown-item" href="#">New Arrivals</a></li>
+        <li><a class="dropdown-item" href="">New Arrivals</a></li>
         <li><a class="dropdown-item" href="#">Clearance</a></li>
         <li><a class="dropdown-item" href="#">All Specials</a></li>
       </ul>
