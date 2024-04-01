@@ -106,6 +106,37 @@ body{
     font-weight: 700;
 }
 
+.btt-button {
+    height: 38px;
+    width: 38px;
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+}
+
+.btt-link {
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.btt-button:hover .btt-link {
+    background-color: black;
+    border-radius: 50%;
+}
+
+.btt-link:hover i {
+    color: white !important;
+}
+
+.btt-link i {
+    color: black;
+}
+
+
 
 
 
