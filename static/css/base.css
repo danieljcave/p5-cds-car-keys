@@ -114,6 +114,11 @@ body{
     right: 5px;
 }
 
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
 .btt-link {
     cursor: pointer;
     text-decoration: none;

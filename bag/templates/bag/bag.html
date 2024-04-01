@@ -48,7 +48,7 @@
                                     <p><strong>Subtotal: </strong>£{{ item.product.price }}</p>
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                    
+                                    {% include "bag/quantity-form.html" %}
                                 </div>
                             </div>
                             <div class="row"><div class="col"><hr></div></div>
@@ -83,7 +83,7 @@
                                         <p class="my-0">£{{ item.product.price }}</p>
                                     </td>
                                     <td class="py-3 w-25">
-                                        <p class="my-0">{{ item.quantity }}</p>
+                                        {% include "bag/quantity-form.html" %}
                                     </td>
                                     <td class="py-3">
                                         <p><strong>Subtotal: </strong>£{{ item.product.price }}</p>
@@ -114,4 +114,30 @@
             </div>
         </div>
     </div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+
+<script type="text/javascript">
+    // Update quantity on click
+    $('.update-link').click(function(e) {
+        var form = $(this).prev('.update-form');
+        form.submit();
+    })
+
+    // Remove item and reload on click
+    $('.remove-item').click(function(e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var url = `/bag/remove/${itemId}/`;
+        var data = {'csrfmiddlewaretoken': csrfToken};
+
+        $.post(url, data)
+         .done(function() {
+             location.reload();
+         });
+    })
+</script>
+
 {% endblock %}
