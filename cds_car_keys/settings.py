@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'checkout',
     'crispy_forms',
     "crispy_bootstrap4",
+    'profiles',
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
