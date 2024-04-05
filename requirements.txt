@@ -15,6 +15,7 @@ cryptography==42.0.2
 debugpy==1.6.7.post1
 decorator==5.1.1
 defusedxml==0.7.1
+dj-database-url==0.5.0
 Django==5.0.4
 django-allauth==0.61.1
 django-countries==7.6.1
@@ -25,6 +26,7 @@ Flask==3.0.0
 google-auth==2.22.0
 google-auth-oauthlib==1.0.0
 gspread==5.10.0
+gunicorn==21.2.0
 idna==3.4
 ipykernel==6.25.1
 ipython==8.14.0
@@ -48,6 +50,7 @@ plumber==1.7
 pprintpp==0.4.0
 prompt-toolkit==3.0.39
 psutil==5.9.5
+psycopg2==2.9.9
 pure-eval==0.2.2
 pyasn1==0.5.0
 pyasn1-modules==0.3.0
