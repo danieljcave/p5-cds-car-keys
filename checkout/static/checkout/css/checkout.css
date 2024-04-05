@@ -36,6 +36,19 @@
     margin-bottom: 10px;
 }
 
+select,
+select option {
+    color: #000000;
+    padding: 0 10px !important;
+}
+
+select:invalid,
+select option[value=""] {
+    color: #aab7c4 !important;
+
+    padding: 0 10px !important;
+}
+
 #loading-overlay {
 	display: none;
 	position: fixed;
