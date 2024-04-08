@@ -22,7 +22,6 @@ Live Version of the website - <a href="https://p5-cds-car-keys-da11dff7570e.hero
 - [**Features**](#features)
 - [**Future Features**](#future-features) 
 - [**Design**](#design)
-- [**Design**](#design)
 - [**Technologies Used**](#technologies-used)
 - [**Testing**](#testing)
 - [**Deployment**](#deployment)
@@ -293,4 +292,36 @@ The page focuses on a black, white and grey theme to stay consistant throught th
 - F33
   - Newsletter
 ![f33](/readME-assets/features/newsletter.png)
+
+
+# Future Features
+
+* A feature that would be good to impliment would be a wishlist/like option, to allow user to be able to save their favroute products to come back to later date or just to save for later.
+* Leave reviews on products and see what they bought with. A way for user to get feedback on what they are looking to buy and see what else people bought with it for stats and trends.
+* Add a DOB option to user profiles to then allow user to get a discount code on their birthday or even deals on holiday such as christmas and easter. To entice user to create an account for discounts.
+
+# Design
+## Data Model
+
+The project is hosted on Heroku and currntly using CI Database. Amazon S3 is used for all of the static file and stripe is primary source for financial payments, along with incorpiration of webhooks to allow for email confirmtaion. 
+There are Custom models used to think our the website and the furture expantion of website and the business. Data Models used bellow.
+
+The Models are created to be able to be updated or to serve a expantion process to limit amount of hard coding needed. For explample, with services and employees model. The company may increase in size and offere more services. So having the option for a Admin or staff memeber to add more employees or to add more services they offer without the need of a developer to hard code into the html.
+
+![Order](/readME-assets/features/order.png)
+![OrderLineItem](/readME-assets/features/orderlineitem.png)
+![Product&Brand](/readME-assets/features/Product-brand.png)
+![Profile](/readME-assets/features/profile-model.png)
+![Services](/readME-assets/features/services-model.png)
+![Employee](/readME-assets/features/email.png)
+
+## Typography
+
+Montserrat is the primary font-family used, with Sans-Ferif as a backup.
+
+# Technologies Used
+* HTML5
+* CSS3
+* JavaScript
+* Python
 
