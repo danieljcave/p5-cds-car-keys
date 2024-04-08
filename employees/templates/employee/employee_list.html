@@ -1,0 +1,19 @@
+<!-- employee_list.html -->
+
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <h1>All Employees</h1>
+    <ul>
+        {% for employee in employees %}
+        <li>
+            <img src="{{ employee.picture.url }}" alt="{{ employee.name }}">
+            <h2>{{ employee.name }}</h2>
+            <p>{{ employee.job_position }}</p>
+            <p>Age: {{ employee.age }}</p>
+            <p>{{ employee.bio }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
