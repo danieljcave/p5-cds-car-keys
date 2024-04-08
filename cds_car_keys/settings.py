@@ -55,7 +55,6 @@ INSTALLED_APPS = [
     'profiles',
     'storages',
     'employees',
-    'newsletter',
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
