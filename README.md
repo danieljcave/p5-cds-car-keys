@@ -42,14 +42,17 @@ Live Version of the website - <a href="https://p5-cds-car-keys-da11dff7570e.hero
 
 ### **User Stories**
 * EPIC 01 : Registration and Account Management
-    <details>
-    <summary>User Stories for EPIC 01:</summary>
-      - US101 - Register an account
-          - As a **site user** I can **register an account** so that **i am able to view my purchase history and proflie details**
-      - US102 - Confirm registration via email
-          - As a **site user** I can **receive email confirmation upon registering** so that **i can verify account registration was successfull**
-
+  <details>
+      <summary>User Stories for EPIC 01:</summary>
     
-    
-    
-    </details>
+    - US101 - Register an account
+      - As a **site user** I can **register an account** so that **i am able to view my purchase history and proflie details**
+    - US102 - Confirm registration via email
+      - As a **site user** I can **receive email confirmation upon registering** so that **i can verify account registration was successfull**
+    - US103 - Able to reset password
+      - As a **site user** I can **easily reset my password if i forget it** so that **I can regain access to my account**
+    - US104 - Access Profile
+      - As a **site user** I can **access personalized user profile** so that **I can view my personal saved information and the order history and confirmations**
+    - US105 - Login & Logout
+      - As a **site user** I can **easilly login or logout** so that **I can access my information on my account**
+  </details>
