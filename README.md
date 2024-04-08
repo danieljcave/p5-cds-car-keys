@@ -325,3 +325,62 @@ Montserrat is the primary font-family used, with Sans-Ferif as a backup.
 * JavaScript
 * Python
 
+### Frameworks and Libraries Used:
+
+  - [Bootstrap:](https://getbootstrap.com/) Bootstrap CSS Framework is used for styling and building responsive web pages.
+  - [Cloudinary:](https://cloudinary.com/) Used to store all blog images and uploaded images.
+  - [Coverage:](https://coverage.readthedocs.io/en/latest/index.html) Used for measuring code coverage of Python test files.
+  - [Django:](https://www.djangoproject.com/) Main Python framework used in the development.
+  - [Django Allauth:](https://django-allauth.readthedocs.io/en/latest/index.html) Used for authentication and account registration.
+  - [Django Crispy Forms:](https://django-crispy-forms.readthedocs.io/en/latest/) Used to simplify the rendering of Django forms.
+  - [dj_database_url:](https://pypi.org/project/dj-database-url/) Used to allow database URLs to connect to the Postgres database.
+  - [Django Countries:](https://pypi.org/project/django-countries/) Used for country selection drop-down
+  - [Gunicorn:](https://gunicorn.org/) Green Unicorn, used as the Web Server to run Django on Heroku.
+  - [Pillow:](https://pillow.readthedocs.io/en/stable/index.html) Python Imaging Library used for image handling
+  - [Stripe:](https://js.stripe.com/v3/) used for secure payments
+  - [Amazon S3:](https://aws.amazon.com/s3/) used to store static files and images.
+  - [Boto3:](https://pypi.org/project/boto3/) the Amazon Web Services (AWS) Software Development Kit (SDK) for Python.
+  - [Django-Storages:](https://django-storages.readthedocs.io/en/latest/) used to connect django to S3.
+
+### Software and Web Applications Used:
+
+  - [Google Fonts:](https://fonts.google.com/) To import font family Roboto
+  - [Font Awesome:](https://fontawesome.com/) Used for style icons for nav and footer and other links
+  - [Chrome DevTools:](https://developer.chrome.com/docs/devtools/) To test inside of different screen sizes
+  - [GitHub:](https://github.com/) GitHub is used to store the project's code and update and pull from. As well as host user stories
+  - [Heroku:](https://www.heroku.com/) For deployment and hosting of the application.
+  - [HTML Validator:](https://validator.w3.org/) Check your code for HTML validation.
+  - [CI Python Linter](https://pep8ci.herokuapp.com/) Used to validate python code
+  - [W3 CSS Validator:](https://jigsaw.w3.org/css-validator/) Check your code for CSS validation.
+  - [Codeanywhere](https://codeanywhere.com/signin) Used as virtual environment for coding
+  - [Code Institute Postgres Database:](https://codeinstitute.net/) Used CI to host PostgreSQL Service
+  - [Stack Overflow](https://stackoverflow.com/) Used for help when hit bumps or errors
+
+# Testing
+* Validator Testing
+  * HTML Validator
+
+# Deployment
+I used the following steps to deply to Heroku:
+
+## Deploying by connecting Githun to heroku
+1. Top right corner in heroku select Create New App
+2. I call the app P5-CDS-Car-Keys and set region to "Europe"
+3. Once the app is created i choose deployment method for "Connect to github"
+4. After logging in and authenticating GitHub, i typed in and selected my repo that i was using for my project.
+5. When the repo appeared, I clicked Connect Button.
+6. Once connected i had the option to deploy.
+7. I went to my setting in heroku and added all the Enviroment varibles to config vars
+8. Once i was ready, i went to my virtual enviroment and did `pip3 freeze --local > requirements.txt`
+9. Once completed i created a Procfile that ran the command, `web gunicorn cds_car_keys.wsgi` 
+10. Once all completed i ran `git add .`, `git commit -m 'final deploy`, `git push`
+11. Then i went back to heroku dashboard and selected deploy.
+12. Waited for heroku to deploy my app and then finished.
+
+## Credits
+- CodeInstitue Boutique Ado - Project was used as a base and then fully expanded, gave the groundwork and idea to build up from.
+- [Codemy.com](https://www.youtube.com/@Codemycom) Some very helpful advice and able to see how others do it and make my own or use advices.
+
+### Acknowledgements
+Would like to thank my mentor Brian Macharia who has helped very much all throught this assignment.
+Along with CodeInstitute Tutors have been a great asistance.
