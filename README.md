@@ -359,7 +359,15 @@ Montserrat is the primary font-family used, with Sans-Ferif as a backup.
 # Testing
 * Validator Testing
   * HTML Validator
-
+    - <a href="/readME-assets/testing/htmlhome.png" target="_blank">Home Page</a>
+    - <a href="/readME-assets/testing/htmlemployee.png" target="_blank">Employee Page</a>
+    - <a href="/readME-assets/testing/htmlservices.png" target="_blank">Services Page</a>
+    - <a href="/readME-assets/testing/htmlproducts.png" target="_blank">Products Page</a>
+    - <a href="/readME-assets/testing/product_detail.png" target="_blank">Product View Page</a>
+    - <a href="/readME-assets/testing/htmlprofile.png" target="_blank">Profile Page</a>
+    - <a href="/readME-assets/testing/htmlbag.png" target="_blank">Bag Page</a>
+      - HTML Bag has a quantity error but cannot change due to duplicate product has multiple same id causing html error.
+    - <a href="/readME-assets/testing/htmlcheckout.png" target="_blank">Checkout Page</a>
 
   * CSS Validator
     - <a href="/readME-assets/testing/base-css.png" target="_blank">Results for Base css</a>
