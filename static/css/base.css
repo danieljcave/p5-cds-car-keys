@@ -31,6 +31,10 @@ body{
     padding-top: 250px;
 }
 
+.header-overlay{
+    padding-top: 70px;
+}
+
 .header-container-products{
     padding-top: 100px;
 }
@@ -61,6 +65,19 @@ body{
     width: 75px;
     border-radius: 10%;
     margin-bottom: 1rem;
+}
+
+.emp-img{
+    max-inline-size: 100%;
+    object-fit: cover;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 2px solid black;
+}
+.card-e{
+    height: 100% !important; 
 }
 
 .card{

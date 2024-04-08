@@ -1,19 +1,38 @@
-<!-- employee_list.html -->
+{% extends "base.html" %}
+{% load static %}
 
-{% extends 'base.html' %}
+{% block page_header %}
+    <div class="container header-overlay">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
 {% block content %}
 <div class="container">
-    <h1>All Employees</h1>
-    <ul>
+        <h1 class="text-center">All Employees</h1>
+    <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
         {% for employee in employees %}
-        <li>
-            <img src="{{ employee.picture.url }}" alt="{{ employee.name }}">
-            <h2>{{ employee.name }}</h2>
-            <p>{{ employee.job_position }}</p>
-            <p>Age: {{ employee.age }}</p>
-            <p>{{ employee.bio }}</p>
-        </li>
+        <div class="col">
+            <div class="card card-e">
+                <div class="card-body text-center">
+                    <img src="{{ employee.picture.url }}" class="card-img-top emp-img" alt="{{ employee.name }}">
+                    <h5 class="card-title">{{ employee.name }}</h5>
+                    <hr>
+                        <p class="card-text">{{ employee.job_position }}</p>
+                        <p class="card-text">Age: {{ employee.age }}</p>
+                        <p class="card-text">{{ employee.bio }}</p>
+                        {% if request.user.is_superuser %}
+                            <small class="ml-3">
+                                <a href="{% url 'edit_employee' employee.id %}">Edit</a> | 
+                                <a class="text-danger" href="{% url 'delete_employee' employee.id %}">Delete</a>
+                            </small>
+                        {% endif %}
+                </div>
+            </div>
+        </div>
         {% endfor %}
-    </ul>
+    </div>
 </div>
 {% endblock %}
