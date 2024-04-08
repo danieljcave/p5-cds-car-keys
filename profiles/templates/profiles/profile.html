@@ -1,6 +1,16 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block page_title %}
+    <title>My Profile - CDS Car Keys</title>
+{% endblock %}
+
+{% block meta_tags %}
+    <meta name="description" content="Manage your profile information and view order history on YourSiteName.">
+    <meta name="keywords" content="My Profile, Order History, YourSiteName">
+    <meta name="robots" content="index, follow">
+{% endblock %}
+
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
 {% endblock %}

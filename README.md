@@ -360,6 +360,14 @@ Montserrat is the primary font-family used, with Sans-Ferif as a backup.
 * Validator Testing
   * HTML Validator
 
+
+
+
+
+
+
+
+
 # Deployment
 I used the following steps to deply to Heroku:
 

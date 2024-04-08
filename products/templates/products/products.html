@@ -1,6 +1,16 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block page_title %}
+    <title>Car Keys - Buy Car Keys Online | CDS Car Keys</title>
+{% endblock %}
+
+{% block meta_tags %}
+    <meta name="description" content="Explore a wide range of car keys available online at CDS Car Keys. Find high-quality car keys, remotes, and accessories.">
+    <meta name="keywords" content="car keys, car remotes, key fobs, car key accessories, automotive keys, CDS Car Keys">
+    <meta name="robots" content="index, follow">
+{% endblock %}
+
 {% block page_header %}
 <div class="container header-container-products">
     <div class="row">
@@ -13,7 +23,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center mt-3">
-            <h2 class="logo-font">Car Keys</h2>
+            <h1 class="logo-font">Car Keys</h1>
             <hr class="mb-1">
         </div>
     </div>
@@ -152,4 +162,4 @@
             }
         })
     </script>
-    {% endblock %}
+{% endblock %}
