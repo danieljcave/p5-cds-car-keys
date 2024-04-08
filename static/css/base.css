@@ -61,8 +61,8 @@ body{
 .services-img{
     max-inline-size: 100%;
     object-fit: cover;
-    height: 75px;
-    width: 75px;
+    height: 125px;
+    width: 125px;
     border-radius: 10%;
     margin-bottom: 1rem;
 }
