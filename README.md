@@ -361,12 +361,10 @@ Montserrat is the primary font-family used, with Sans-Ferif as a backup.
   * HTML Validator
 
 
-
-
-
-
-
-
+  * CSS Validator
+    - <a href="/readME-assets/testing/base-css.png" target="_blank">Results for Base css</a>
+    - <a href="/readME-assets/testing/checkout-cs.png" target="_blank">Results for Checkout css</a>
+    - <a href="/readME-assets/testing/profilecss.png" target="_blank">Results for profile css</a> 
 
 # Deployment
 I used the following steps to deply to Heroku:
