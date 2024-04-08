@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /bag/
+Disallow: /employees/
+Sitemap: https://p5-cds-car-keys-da11dff7570e.herokuapp.com/sitemap.xml
