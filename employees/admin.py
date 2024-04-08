@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import Employee
 
+
 class EmployeeAdmin(admin.ModelAdmin):
     list_display = (
         'picture',
@@ -9,5 +10,6 @@ class EmployeeAdmin(admin.ModelAdmin):
         'age',
         'bio',
     )
+
 
 admin.site.register(Employee, EmployeeAdmin)

@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import Brand, Product
 
+
 class ProductAdmin(admin.ModelAdmin):
     list_display = (
         'sku',

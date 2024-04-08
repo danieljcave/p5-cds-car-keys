@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Employee(models.Model):
     picture = models.ImageField(upload_to='employees', null=True, blank=False)
     name = models.CharField(max_length=100)

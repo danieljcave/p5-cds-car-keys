@@ -374,6 +374,164 @@ Montserrat is the primary font-family used, with Sans-Ferif as a backup.
     - <a href="/readME-assets/testing/checkout-cs.png" target="_blank">Results for Checkout css</a>
     - <a href="/readME-assets/testing/profilecss.png" target="_blank">Results for profile css</a> 
 
+  * Python Testing
+  - Python Validation was performed using the command : python3 -m flake8.  No serious errors reported. Messages relevant to the project py files are as follows:
+
+  <details>
+    <summary>Python Validation Results</summary>
+
+  - .\cds_car_keys\settings.py:18:5: F401 'env' imported but unused
+  - .\cds_car_keys\settings.py:128:5: E122 continuation line missing indentation or outdented
+  - .\cds_car_keys\settings.py:132:1: E122 continuation line missing indentation or outdented
+  - .\checkout\apps.py:8:9: F401 'checkout.signals' imported but unused
+  - .\checkout\migrations\0001_initial.py:19:80: E501 line too long (117 > 79 characters)
+  - .\checkout\migrations\0001_initial.py:20:80: E501 line too long (82 > 79 characters)
+  - .\checkout\migrations\0001_initial.py:25:80: E501 line too long (85 > 79 characters)
+  - .\checkout\migrations\0001_initial.py:28:80: E501 line too long (92 > 79 characters)
+  - .\checkout\migrations\0001_initial.py:29:80: E501 line too long (83 > 79 characters)
+  - .\checkout\migrations\0001_initial.py:31:80: E501 line too long (98 > 79 characters)
+  - .\checkout\migrations\0001_initial.py:32:80: E501 line too long (97 > 79 characters)
+  - .\checkout\migrations\0001_initial.py:33:80: E501 line too long (97 > 79 characters)
+  - .\checkout\migrations\0001_initial.py:39:80: E501 line too long (117 > 79 characters)
+  - .\checkout\migrations\0001_initial.py:40:80: E501 line too long (90 > 79 characters)
+  - .\checkout\migrations\0001_initial.py:42:80: E501 line too long (104 > 79 characters)
+  - .\checkout\migrations\0001_initial.py:43:80: E501 line too long (137 > 79 characters)
+  - .\checkout\migrations\0001_initial.py:44:80: E501 line too long (115 > 79 characters)
+  - .\checkout\migrations\0004_order_user_profile.py:18:80: E501 line too long (155 > 79 characters)
+  - .\employees\migrations\0001_initial.py:17:80: E501 line too long (117 > 79 characters)
+  - .\employees\migrations\0001_initial.py:18:80: E501 line too long (81 > 79 characters)
+  - .\products\migrations\0001_initial.py:18:80: E501 line too long (117 > 79 characters)
+  - .\products\migrations\0001_initial.py:20:80: E501 line too long (91 > 79 characters)
+  - .\products\migrations\0001_initial.py:29:80: E501 line too long (117 > 79 characters)
+  - .\products\migrations\0001_initial.py:30:80: E501 line too long (81 > 79 characters)
+  - .\products\migrations\0001_initial.py:34:80: E501 line too long (103 > 79 characters)
+  - .\products\migrations\0001_initial.py:35:80: E501 line too long (87 > 79 characters)
+  - .\products\migrations\0001_initial.py:36:80: E501 line too long (82 > 79 characters)
+  - .\products\migrations\0001_initial.py:37:80: E501 line too long (135 > 79 characters)
+  - .\profiles\migrations\0001_initial.py:21:80: E501 line too long (117 > 79 characters)
+  - .\profiles\migrations\0001_initial.py:22:80: E501 line too long (94 > 79 characters)
+  - .\profiles\migrations\0001_initial.py:23:80: E501 line too long (97 > 79 characters)
+  - .\profiles\migrations\0001_initial.py:24:80: E501 line too long (100 > 79 characters)
+  - .\profiles\migrations\0001_initial.py:25:80: E501 line too long (100 > 79 characters)
+  - .\profiles\migrations\0001_initial.py:26:80: E501 line too long (97 > 79 characters)
+  - .\profiles\migrations\0001_initial.py:27:80: E501 line too long (91 > 79 characters)
+  - .\profiles\migrations\0001_initial.py:28:80: E501 line too long (93 > 79 characters)
+  - .\profiles\migrations\0001_initial.py:29:80: E501 line too long (111 > 79 characters)
+  - .\profiles\migrations\0001_initial.py:30:80: E501 line too long (121 > 79 characters)
+  - .\services\migrations\0001_initial.py:17:80: E501 line too long (117 > 79 characters)
+
+  </details>
+
+* Manual Testing
+  - US101 - Register an account
+    - As a **site user** I can **register an account** so that **i am able to view my purchase history and proflie details**
+    - Testing Complete:
+      - Created an account with multiple emails to confirm account creation successfull.
+  - US102 - Confirm registration via email
+    - As a **site user** I can **receive email confirmation upon registering** so that **i can verify account registration was successfull**
+    - Testing Complete:
+      - Recived and email to confirm account create. Opened link to confirm working link. Account created and registered.
+  - US103 - Able to reset password
+    - As a **site user** I can **easily reset my password if i forget it** so that **I can regain access to my account**
+    - Testing Complete:
+      - Clicked reset password and able to enter an email. Email was sent with instructions to reset password.
+  - US104 - Access Profile
+    - As a **site user** I can **access personalized user profile** so that **I can view my personal saved information and the order history and confirmations**
+    - Testing Complete:
+      - Logged into account and able to access profile from the navigation bar
+  - US105 - Login & Logout
+    - As a **site user** I can **easilly login or logout** so that **I can access my information on my account**
+    - Testing Complete:
+      - Able to successfully loging and logout of multiple accounts.
+<br>
+
+  - US301 - Sort a list of avalible keys
+      - As a **site user** I can **sort through a list of keys** so that **I can choose the best rated and sorted products**
+      - Testing Complete:
+        - Was able to click on sort option in the products page and go through multiple links
+    - US302 - Sort a specific category
+      - As a **site user** I can **sort a specific category or keys** so that **I can find the best-rated key in a specific category or to sort in a range or keys**
+      - Testing Complete:
+        - Able to select category such as audi and only audi keys came up
+    - US303 - Sort a specific Manufacturer
+      - As a **site user** I can **sort by specific manufacturer** so that **I can find the right key brand and choose a specific key from the manufacture**
+      - Testing Complete:
+        - Sorted by Manufactutre and only that manufacturer showed so successful
+    - US304 - Search for a specific key or maufacturer
+      - As a **site user** I can **search by name, description or manufacture** so that **I can find a specific key to purchase**
+      - Testing Complete:
+        - Search for hyundia word and a hyundia key came up.
+    - US305 - View a results of searching and amount of prodcuts found
+      - As a **site user** I can **easily see results of my searches** so that **I can decide what key i want to purchase**
+      - Testing Complete:
+        - Searched for word transponder and all keys that had transponder in name or description came up.
+<br>
+
+- US401 - Add an key to shopping bag
+      - As a **site user** I can **add keys to the shopping bag** so that **I can what i want or more items to purchase**
+      - Testing Complete:
+        - Went to products page and selected multiple keys and all successfully went into bag.
+    - US402 - Edit shopping bag and remove items from bag
+      - As a **site user** I can **modify my shopping bag even after putting keys in my bag** so that **I can manage the shopping bag even if erros have been made or have any changes**
+      - Testing Complete:
+        - Was able to update product quantity and remove items from bag.
+    - US403 - See user notification on actions
+      - As a **site user** I can **get a notification on the screen of my actions** so that **I can easily confirm that my interaction with the website too place**
+      - Testing Complete:
+        - When add a product or remove a product notification message is displayed.
+    - US404 - Finalise an order via checkout page
+      - As a **site user** I can **complete an order on the checkout page** so that **I can see my final total, a list of items and sumarry and specify a delivery adress and payment option**
+      - Testing Complete:
+        - Able to select secure checkout and taken to the checkout page.
+    - US405 - Have a secure payment option
+      - As a **site user** I can **enter payment details** so that **I can payment informtaion is secure and action is secure**
+      - Testing Complete:
+        - Entered card details into payment method and secure transaction went through
+    - US406 - View an order confirmation after checkout
+      - As a **site user** I can **view an order confirmation after checkout** so that **I can see what was ordered and the final cost**
+      - Testing Complete:
+        - Was able to see order confirmation and a notification of email sent to email entered upon checkout.
+    - US407 - Recive email confirmation of order after checkout
+      - As a **site user** I can **recive and email confirmation after checkout completion** so that **I can have a record of all my purchase as a backup**
+      - Testing Complete:
+        - Recieved and email with details of my order.
+<br>
+
+- US501 - Add a product
+      - As a **site admin** I can **add a product** so that **I can sell a new product on the store**
+      - Testing Complete:
+        - Logged into admin account and was able to create a test key to add to products page.
+    - US502 - Add a employee
+      - As a **site admin** I can **add a new employee** so that **I can update our team roster on the website**
+      - Testing Complete:
+        - Logged into admin account and enter a new employee to the site.
+    - US503 - Add a service
+      - As a **site admin** I can **add new services** so that **I can offer more services along with products**
+      - Testing Complete:
+        - Logged into admin account and able to create and new service that is displayed on the services page.
+    - US504 - Edit or update product, employee or service
+      - As a **site admin** I can **change and details to uploaded inforion or update** so that **I can keep store information up to date fresh**
+      - Testing Complete:
+        - Edited updated both test employee and the test service and the test key
+    - US505 - Delete a product, employee or service
+      - As a **site admin** I can **remove a product, employee or server** so that **I can remove a product, and employee or service from the database**
+      - Testing Complete:
+        - Was able to delete both the test employee and the test service and the key aswell
+<br>
+
+- US601 - View company facebook page
+      - As a **site admin** I can **find the company on facebook** so that **I can view and keep up to date with company posts**
+      - Testing Complete:
+        - Checked facebook links and the active Facebook page to show working.
+    - US602 - Subscribe to newsletter
+      - As a **site admin** I can **subscribe to company newsletter** so that **I can get company news and offers**
+      - Testing Complete:
+        - Subscribed to newsletter and checked inside of MailChimp and email was added to mailing list
+    - US603 - SEO
+      - As a **site admin** I can **find the site through web searches** so that **I can easily acces the site**
+      - Testing Complete:
+        - Checked all pages to include, Descriptions, Keywords and alt tags to any avalible options.
+
 # Deployment
 I used the following steps to deply to Heroku:
 

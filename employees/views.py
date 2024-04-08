@@ -4,9 +4,11 @@ from .models import Employee
 from .forms import EmployeeForm
 from django.contrib.admin.views.decorators import staff_member_required
 
+
 def employee_list(request):
     employees = Employee.objects.all()
-    return render(request, 'employee/employee_list.html', {'employees': employees})
+    return render(request, 'employee/employee_list.html', {'employees': employees}) # noqa
+
 
 @staff_member_required
 def add_employee(request):
@@ -15,9 +17,9 @@ def add_employee(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully added employee!')
-            return redirect('employee_list')  # Redirect to the index page after adding an employee
+            return redirect('employee_list')
         else:
-            messages.error(request, 'Failed to add employee. Please ensure the form is valid.')
+            messages.error(request, 'Failed to add employee. Please ensure the form is valid.') # noqa
     else:
         form = EmployeeForm()
 

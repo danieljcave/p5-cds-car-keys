@@ -75,8 +75,8 @@ class StripeWH_Handler:
                 profile.default_country = shipping_details.address.country
                 profile.default_postcode = shipping_details.address.postal_code
                 profile.default_town_or_city = shipping_details.address.city
-                profile.default_street_address1 = shipping_details.address.line1
-                profile.default_street_address2 = shipping_details.address.line2
+                profile.default_street_address1 = shipping_details.address.line1 # noqa
+                profile.default_street_address2 = shipping_details.address.line2 # noqa
                 profile.default_county = shipping_details.address.state
                 profile.save()
 
@@ -136,7 +136,7 @@ class StripeWH_Handler:
                         )
                         order_line_item.save()
                     else:
-                        for size, quantity in item_data['items_by_size'].items():
+                        for size, quantity in item_data['items_by_size'].items(): # noqa
                             order_line_item = OrderLineItem(
                                 order=order,
                                 product=product,

@@ -4,10 +4,12 @@ from .models import Service
 from .forms import ServiceForm
 from django.contrib.admin.views.decorators import staff_member_required
 
+
 # View to list all services
 def service_list(request):
     services = Service.objects.all()
-    return render(request, 'services/service_list.html', {'services': services})
+    return render(request, 'services/service_list.html', {'services': services}) # noqa
+
 
 # View to add a new service
 @staff_member_required
@@ -17,15 +19,16 @@ def add_service(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Service added successfully!')
-            return redirect('service_list')  # Redirect to the service list page after adding a service
+            return redirect('service_list')  # Redirect to the service list page after adding a service # noqa
         else:
-            messages.error(request, 'Failed to add service. Please ensure the form is valid.')
+            messages.error(request,'Failed to add service. Please ensure the form is valid.') # noqa
     else:
         form = ServiceForm()
 
     template = 'services/add_service.html'
     context = {'form': form}
     return render(request, template, context)
+
 
 # View to edit an existing service
 @staff_member_required
@@ -43,6 +46,7 @@ def edit_service(request, service_id):
     template = 'services/edit_service.html'
     context = {'form': form, 'service': service}
     return render(request, template, context)
+
 
 # View to delete an existing service
 @staff_member_required
