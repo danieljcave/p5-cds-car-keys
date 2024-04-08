@@ -146,3 +146,151 @@ Bellow are a list of features avalible on the site along with a decription. Many
 
 CDS Car Key uses a B2C e-commerce model, selling directly to customers with single online payments.
 
+The page focuses on a black, white and grey theme to stay consistant throught the site.
+
+- F-01
+  - The homepage and shop homepage Desktop View
+![F01 Desktop View](/readME-assets/features/homepage.png)
+![F01 Shop View](/readME-assets/features/shop.png)
+
+- F-02
+  - The Homepage and shop on tablet view
+![F-02](/readME-assets/features/homepage-tab.png)
+![F-02](/readME-assets/features/shop-tab.png)
+
+- F-03
+  - The homepage and shop on mobile view
+
+![F-03](/readME-assets/features/homepage-phone.png)
+![F-03](/readME-assets/features/shop-phone.png)
+
+- F-04
+  - View Avalible Key Products
+  ![F-04](/readME-assets/features/keys.png)
+
+- F-05
+  - Filter and Sort options avalible
+![F-05](/readME-assets/features/filter-prod.png)
+
+- F-06
+  - Manufacturer filter options (Audi)
+![F-06](/readME-assets/features/category.png)
+
+- F-07
+  - Product View for details
+![F-07](/readME-assets/features/key-detail.png)
+
+- F-08
+  - About Us and Services Links
+![F-09](/readME-assets/features/about-serv.png)
+
+- F-09
+  - About Us Section
+![F-09](/readME-assets/features/about.png)
+
+- F-10
+  - Services Section
+![F-10](/readME-assets/features/services.png)
+
+- F11
+  - Bag Notification
+![F-11](/readME-assets/features/notification.png)
+
+- F12
+  - Newsletter Popup
+![F-12](/readME-assets/features/newsletter-popup.png)
+
+## Account and Registration
+
+- F13
+  - Registration Form
+![F-13](/readME-assets/features/signup.png)
+
+- F14
+  - Sign in Form
+![F-14](/readME-assets/features/signin.png)
+
+- F15
+  - Email Confirmation
+![F15](/readME-assets/features/verify.png)
+
+- F16
+  - Logout Form
+![F16](/readME-assets/features/logout.png)
+
+- F17
+  - Admin Account View
+![f17](/readME-assets/features/admin-view.png)
+
+- F18
+  - Profile View
+![f18](/readME-assets/features/profile.png)
+
+## E-Commerce Features
+
+- F19
+  - Shopping Bag
+![f19](/readME-assets/features/bag.png)
+
+- F20
+  - Checkout Page
+![f20](/readME-assets/features/checkout.png)
+
+- F21
+  - Checkout Complete
+![f21](/readME-assets/features/order-confirm.png)
+
+- F22
+  - Stripe Events
+![f22](/readME-assets/features/events.png)
+
+- F23 
+  - Stripe Webhooks
+![f23](/readME-assets/features/wh.png)
+
+- F24
+  - Email Confirmation
+![f24](/readME-assets/features/email.png)
+
+## Admin Features
+
+- F25
+  - Add Product
+[!f25](/readME-assets/features/add-prod.png)
+
+- F26
+  - Add employee
+![f26](/readME-assets/features/add_employee.png)
+
+- F27
+  - Add Service
+![f27](/readME-assets/features/add_service.png)
+
+- F28
+  - Edit Product
+![f28](/readME-assets/features/edit-prod.png)
+
+- F29 
+  - Edit Employee
+![29](/readME-assets/features/edit-emp.png)
+
+- F30
+  - Edit Services
+![f30](/readME-assets/features/edit-serv.png)
+
+## SEO and Marketing
+
+- F31
+  - SEO 
+    - Added Meta tags along with description and keywords
+    - Appropriate site title and home page content
+    - Informative site heading slogan on home page
+
+- F32
+  - Facebook Page
+![f32](/readME-assets/features/fb.png)
+
+- F33
+  - Newsletter
+![f33](/readME-assets/features/newsletter.png)
+
