@@ -1,20 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
-{% load bag_tools %}
-
-{% block page_title %}
-    <title>Shopping Bag - CDS Car Keys</title>
-{% endblock %}
-
-{% block meta_tags %}
-    <meta name="description" content="View and manage items in your shopping bag.">
-    <meta name="keywords" content="Shopping bag, view bag, manage items, CDS Car Keys">
-    <meta name="robots" content="index, follow">
-    <meta name="author" content="Daniel Cave">
-{% endblock %}
 
 {% block page_header %}
-<div class="container heading-overlay">
+<div class="container header-container">
     <div class="row">
         <div class="col"></div>
     </div>
@@ -22,134 +10,176 @@
 {% endblock %}
 
 {% block content %}
-    <div class="overlay"></div>
-    <div class="container mb-2">
-        <div class="row">
-            <div class="col">
-                <hr>
-                <h2 class="logo-font mb-4">Shopping Bag</h2>
-                <hr>
-            </div>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-sm-6 my-auto text-center">
+            <h2 class="display-4 home-font text-black home-header">For all your</h2>
+            <h2 class="display-4 home-font text-black home-header">Vehicle Needs</h2>
+            <a class="btn btn-outline-black mb-2" href="{% url 'products' %}" role="button">Shop Now</a>
+            <a class="btn btn-outline-black mb-2" href="{% url 'service_list' %}" role="button">Learn More</a>
         </div>
-
+        <div class="col-12 col-sm-6 my-auto d-none d-sm-block">
+            <img src="{{ MEDIA_URL }}cds-logo.png" class="img-fluid" alt="CDS Car Keys Logo">
+        </div>
+    </div>
+</div>
+<div class="container-fluid about-section">
+    <div class="container">
         <div class="row">
-            <div class="col">
-                {% if bag_items %}
-                    <div class="d-block d-md-none">
-                        <div class="row">
-                            <div class="col">
-                                {% include "bag/bag-total.html" %}
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                {% include "bag/checkout-buttons.html" %}
-                                <p class="text-muted mb-5">A summary of your bag contents is below</p>
-                            </div>
-                        </div>
-                        {% for item in bag_items %}
-                            <div class="row">
-                                <div class="col-12 col-sm-6 mb-2">
-                                    {% include "bag/product-image.html" %}
-                                </div>
-                                <div class="col-12 col-sm-6 mb-2">
-                                    {% include "bag/product-info.html" %}
-                                </div>
-                                <div class="col-12 col-sm-6 order-sm-last">
-                                    <p class="my-0">Price Each: £{{ item.product.price }}</p>
-                                    <p><strong>Subtotal: </strong>£{{ item.product.price | calc_subtotal:item.quantity }}</p>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    {% include "bag/quantity-form.html" %}
-                                </div>
-                            </div>
-                            <div class="row"><div class="col"><hr></div></div>
-                        {% endfor %}
-                        <div class="btt-button shadow-sm rounded-0 border border-black">
-                            <a class="btt-link d-flex h-100">
-                                <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
-                            </a>	
+            <div class="my-auto text-center">
+                <h2 class="display-6 feature-header text-uppercase section-header m-4">About Us</h2>
+                <div class="row">
+                    <div class="col-12 col-md-6 p-3">
+                        <p class="about-text">We are a Birmingham based business offering a fully mobile service around
+                            the West Midlands. We provide spare car & van keys for most vehicles, along with attending
+                            times
+                            where all keys have been lost for a car/van or keys have been locked in a car/van.</p>
+                    </div>
+                    <div class="col-12 col-md-6 p-3">
+                        <p class="about-text">We also fit Ghost II Immobilisers and trackers fully mobile around the
+                            West
+                            Midlands in areas such as Acocks Green, Hall Green, Solihull, Sheldon Sparkbrook, Sparkhill,
+                            Dudley,
+                            Wolverhampton, Coventry, Aston, Alum Rock, Small Heath and more!</p>
                         </div>
                     </div>
-                    <div class="table-responsive rounded d-none d-md-block">
-                        <table class="table table-sm table-borderless table-transparent">
-                            <thead class="text-black">
-                                <tr>
-                                    <th scope="col">Product Info</th>
-                                    <th scope="col"></th>
-                                    <th scope="col">Price</th>
-                                    <th scope="col">Qty</th>
-                                    <th scope="col">Subtotal</th>
-                                </tr>
-                            </thead>
-
-                            {% for item in bag_items %}
-                                <tr>
-                                    <td class="p-3 w-25">
-                                        {% include "bag/product-image.html" %}
-                                    </td>
-                                    <td class="py-3">
-                                        {% include "bag/product-info.html" %}
-                                    </td>
-                                    <td class="py-3">
-                                        <p class="my-0">£{{ item.product.price }}</p>
-                                    </td>
-                                    <td class="py-3 w-25">
-                                        {% include "bag/quantity-form.html" %}
-                                    </td>
-                                    <td class="py-3">
-                                        <p class="my-0">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
-                                    </td>
-                                </tr>
-                            {% endfor %}
-                            <tr>
-                                <td colspan="5" class="pt-5 text-end">
-                                    {% include "bag/bag-total.html" %}
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="5" class="text-end">
-                                    {% include "bag/checkout-buttons.html" %}
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                {% else %}
-                    <p class="lead mb-5">Your bag is empty.</p>
-                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
-                        <span class="icon">
-                            <i class="fas fa-chevron-left"></i>
-                        </span>
-                        <span class="text-uppercase">Keep Shopping</span>
-                    </a>
-                {% endif %}
+                    <a class="btn btn-outline-light mb-4" href="{% url 'employee_list' %}" role="button">Our Team!</a>
             </div>
         </div>
     </div>
+</div>
+<div class="container-fluid services-section">
+    <div class="container">
+        <div class="row">
+            <div class="my-auto text-center">
+                <h2 class="display-6 services-header text-uppercase m-4">Services</h2>
+                <div class="row row-cols-1 row-cols-md-2 g-4 mb-5">
+                    <div class="col-6 col-md-12 p-3">
+                        <p class="">We offer a range or services here a CDS Car Keys. If you have lost your keys we have you covered. Did you purchase your vehicle with only one key? We can make you a new one. Vehicle theft is a major problem in the UK Purchase a Ghost to protect your car. Locked out of your vehicle? We can enter your vehicle without any damage to your car.</p>
+                        <a class="btn btn-outline-black" href="{% url 'service_list' %}" role="button">View Our Services!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid need-us-section">
+    <div class="container text-white pt-3 pb-3">
+        <div class="row">
+            <div class="col-md-3 pt-3 pb-3">
+                <h5 class="services-heading">Here When You Need Us Most!</h5>
+                <hr class="services-break-heading">
+                <p></p>
+            </div>
+            <div class="col-md-5 p-3">
+                <div class="services-icons">
+                    <i class="fa-solid fa-key"></i>
+                </div>
+                <h6>Repairing Keys</h6>
+                <hr class="services-break">
+                <p>No matter how much care and protection you offer your car keys, over time they will wear, damage,
+                    crack and often fall apart! However we are not out to make as much money out of you as possible. We
+                    stock lots of repair parts and cases for keys to keep the costs down for you and give your key a new
+                    life!</p>
+            </div>
+            <div class="col-md-4 p-3">
+                <div class="services-icons">
+                    <i class="fa-solid fa-laptop"></i>
+                </div>
+                <h6>Reprogramming</h6>
+                <hr class="services-break">
+                <p>In certain cases your key might require reprogramming. This is common in certain brands and cars! if
+                    your key has stopped responding after car/key battery changes or the remote has stopped working, we
+                    maybe able to reprogram your existing key to prevent the cost of a complete new key.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 d-none d-md-block">
+            </div>
+            <div class="col-md-5 pt-2 pb-2">
+                <div class="services-icons">
+                    <i class="fa-solid fa-car-side"></i>
+                </div>
+                <h6>Fully Mobile Service</h6>
+                <hr class="services-break">
+                <p>Our team is fully set up and prepared to assist you and your vehicle at the roadside! This prevents
+                    expensive recovery costs as well as getting you back on the road faster!</p>
+            </div>
+            <div class="col-md-4 pt-2 pb-2">
+                <div class="services-icons">
+                    <i class="fa-solid fa-award"></i>
+                </div>
+                <h6>Warranty</h6>
+                <hr class="services-break">
+                <p>We understand that car keys are expensive, therefore we offer one of the most comprehensive
+                    warranties seen by auto locksmiths in the UK! With your new replacement keys being fully protected
+                    for 12 months against any non fault issues! (Please check out our warranty policy for details)</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container newsletter">
+    <div id="mc_embed_shell">
+        <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+  <div id="mc_embed_signup">
+      <form action="https://herokuapp.us18.list-manage.com/subscribe/post?u=47adc2b6d1b450c02bd1beb0f&amp;id=2d255a113f&amp;f_id=0098c2e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+          <div id="mc_embed_signup_scroll"><h2>Subscribe to our newsletter!</h2>
+              <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+              <div class="mc-field-group"><label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value=""><span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span></div>
+          <div id="mce-responses" class="clear foot">
+              <div class="response" id="mce-error-response" style="display: none;"></div>
+              <div class="response" id="mce-success-response" style="display: none;"></div>
+          </div>
+      <div aria-hidden="true" style="position: absolute; left: -5000px;">
+          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups -->
+          <input type="text" name="b_47adc2b6d1b450c02bd1beb0f_2d255a113f" tabindex="-1" value="">
+      </div>
+          <div class="optionalParent">
+              <div class="clear foot">
+                  <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
+                  <p style="margin: 0px auto;"><a href="http://eepurl.com/iNC-QU" title="Mailchimp - email marketing made easy and fun"><span style="display: inline-block; background-color: transparent; border-radius: 4px;"><img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"></span></a></p>
+              </div>
+          </div>
+      </div>
+  </form>
+  </div>
+</div>
+</div>
 {% endblock %}
 
 {% block postloadjs %}
-{{ block.super }}
+<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/47adc2b6d1b450c02bd1beb0f/0ab11fc9a08e32ae6c65c5062.js");</script>
 
-<script type="text/javascript">
-    // Update quantity on click
-    $('.update-link').click(function(e) {
-        var form = $(this).prev('.update-form');
-        form.submit();
-    })
-
-    // Remove item and reload on click
-    $('.remove-item').click(function(e) {
-        var csrfToken = "{{ csrf_token }}";
-        var itemId = $(this).attr('id').split('remove_')[1];
-        var url = `/bag/remove/${itemId}/`;
-        var data = {'csrfmiddlewaretoken': csrfToken};
-
-        $.post(url, data)
-         .done(function() {
-             location.reload();
-         });
-    })
+<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+<script >
+    (function ($) {
+        window.fnames = new Array();
+        window.ftypes = new Array();
+        fnames[0] = 'EMAIL';
+        ftypes[0] = 'email';
+        fnames[1] = 'FNAME';
+        ftypes[1] = 'text';
+        fnames[2] = 'LNAME';
+        ftypes[2] = 'text';
+        fnames[3] = 'ADDRESS';
+        ftypes[3] = 'address';
+        fnames[4] = 'PHONE';
+        ftypes[4] = 'phone';
+        fnames[5] = 'BIRTHDAY';
+        ftypes[5] = 'birthday';
+    }(jQuery));
+    var $mcj = jQuery.noConflict(true);
 </script>
 
+{% endblock %}
+
+{% block page_title %}
+    <title>For All Your Vehicle Needs - CDS Car Keys</title>
+{% endblock %}
+
+{% block meta_tags %}
+    <meta name="description" content="CDS Car Keys provides spare car & van keys, Ghost II Immobilisers, and fully mobile services around the West Midlands.">
+    <meta name="keywords" content="CDS Car Keys, automotive services, car keys, spare keys, Ghost II Immobilisers, vehicle locksmith, West Midlands">
+    <meta name="author" content="Daniel Cave">
 {% endblock %}
